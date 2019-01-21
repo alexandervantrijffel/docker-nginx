@@ -11,9 +11,9 @@ ENV RTMP_VERSION=1.2.1 \
 
 ARG WITH_DEBUG=false
 
-ARG WITH_PAGESPEED=true
+ARG WITH_PAGESPEED=false
 
-ARG WITH_RTMP=true
+ARG WITH_RTMP=false
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \

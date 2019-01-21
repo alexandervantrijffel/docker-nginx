@@ -77,6 +77,8 @@ ${WITH_PAGESPEED} && {
   download_and_extract "https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}-x64.tar.gz" ${NGINX_BUILD_ASSETS_DIR}/ngx_pagespeed/psol
   EXTRA_ARGS+=" --add-module=${NGINX_BUILD_ASSETS_DIR}/ngx_pagespeed"
 }
+download_and_extract "https://github.com/fdintino/nginx-upload-module/archive/2.3.0.tar.gz" ${NGINX_BUILD_ASSETS_DIR}/upload
+  EXTRA_ARGS+=" --add-module=${NGINX_BUILD_ASSETS_DIR}/upload"
 
 download_and_extract "http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz" ${NGINX_BUILD_ASSETS_DIR}/nginx
 cd ${NGINX_BUILD_ASSETS_DIR}/nginx
